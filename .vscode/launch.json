@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      // This one needs the VS Code Extension "Command Variable"
+      "name": "Python: Launch as Module",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "${command:extension.commandvariable.file.relativeDirDots}.${fileBasenameNoExtension}",
+      "justMyCode": true,
+      // "console": "internalConsole",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

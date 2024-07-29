@@ -1,0 +1,28 @@
+{
+  "name": "Python 3",
+  "context": "..",
+  "dockerFile": "dockerfile",
+  "mounts": [
+    "source=/var/run/docker.sock,target=/var/run/docker.sock,type=bind"
+  ],
+  "remoteEnv": {
+    "DOCKER_HOST": "unix:///var/run/docker.sock"
+  },
+  //  "postCreateCommand": "echo \"alias aws='docker run --rm -it -v ~/.aws:/root/.aws public.ecr.aws/aws-cli/aws-cli:latest'\" >> ~/.bashrc",
+  "postCreateCommand": "echo \"alias aws='docker run --rm -it -v ~/.aws:/root/.aws -v /home/ubuntu/projects:/workspaces public.ecr.aws/aws-cli/aws-cli:latest'\" >> ~/.bashrc",
+  "runArgs": ["--network=ubuntu_default"],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.black-formatter",
+        "esbenp.prettier-vscode",
+        "rioj7.command-variable",
+        "visualstudioexptteam.vscodeintellicode",
+        "ms-azuretools.vscode-docker",
+        "amazonwebservices.aws-toolkit-vscode",
+        "redhat.vscode-yaml"
+      ]
+    }
+  }
+}

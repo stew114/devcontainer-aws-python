@@ -1,0 +1,29 @@
+{
+  "editor.formatOnSave": true,
+  "python.languageServer": "Pylance",
+  "json.format.enable": false,
+  "aws.telemetry": false,
+  "redhat.telemetry.enabled": false,
+  "yaml.customTags": ["!Ref", "!GetAtt", "!Sub", "!Base64"],
+  "python.analysis.typeCheckingMode": "basic",
+
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter"
+  }
+}
